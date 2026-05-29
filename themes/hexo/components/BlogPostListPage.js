@@ -3,6 +3,7 @@ import { useGlobal } from '@/lib/global'
 import BlogPostCard from './BlogPostCard'
 import BlogPostListEmpty from './BlogPostListEmpty'
 import PaginationNumber from './PaginationNumber'
+import ProjectShowcase from './ProjectShowcase'
 
 /**
  * 文章列表分页表格
@@ -12,11 +13,35 @@ import PaginationNumber from './PaginationNumber'
  * @returns {JSX.Element}
  * @constructor
  */
-const BlogPostListPage = ({ page = 1, posts = [], postCount, siteInfo }) => {
+const BlogPostListPage = props => {
+  const {
+    page = 1,
+    posts = [],
+    postCount,
+    siteInfo,
+    category,
+    currentCategory
+  } = props
   const { NOTION_CONFIG } = useGlobal()
   const POSTS_PER_PAGE = siteConfig('POSTS_PER_PAGE', null, NOTION_CONFIG)
   const totalPage = Math.ceil(postCount / POSTS_PER_PAGE)
   const showPagination = postCount >= POSTS_PER_PAGE
+
+  const isProjectsPage = [
+    category,
+    currentCategory,
+    props?.page?.title,
+    siteInfo?.title
+  ].some(value => value?.toLowerCase?.().includes('projects'))
+
+  if (isProjectsPage) {
+    return (
+      <div id='container' className='w-full'>
+        <ProjectShowcase />
+      </div>
+    )
+  }
+
   if (!posts || posts.length === 0 || page > totalPage) {
     return <BlogPostListEmpty />
   } else {
