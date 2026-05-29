@@ -77,8 +77,8 @@ const ProjectShowcase = () => {
       {projects.map(project => (
         <article
           key={project.title}
-          className='overflow-hidden border dark:border-black rounded-xl bg-white dark:bg-hexo-black-gray shadow-md'>
-          <div className='grid gap-0 md:grid-cols-[minmax(220px,38%)_1fr]'>
+          className='overflow-hidden border dark:border-black rounded-xl bg-white dark:bg-hexo-black-gray shadow-md md:min-h-[360px]'>
+          <div className='grid h-full gap-0 md:grid-cols-[minmax(220px,38%)_1fr]'>
             <div className='h-56 md:h-full min-h-56 overflow-hidden bg-gray-100 dark:bg-gray-800'>
               <img
                 src={project.image}
@@ -87,23 +87,23 @@ const ProjectShowcase = () => {
               />
             </div>
 
-            <div className='p-6'>
-              <div className='space-y-3'>
+            <div className='flex h-full flex-col justify-between p-6'>
+              <div className='space-y-2.5'>
                 <div>
                   <h2 className='text-2xl font-semibold text-gray-900 dark:text-gray-100'>
                     {project.title}
                   </h2>
-                  <p className='mt-2 text-base text-gray-600 dark:text-gray-300'>
+                  <p className='mt-1.5 text-base text-gray-600 dark:text-gray-300'>
                     {project.subtitle}
                   </p>
                 </div>
 
-                <p className='leading-7 text-gray-700 dark:text-gray-300'>
+                <p className='leading-6 text-gray-700 dark:text-gray-300'>
                   {project.description}
                 </p>
               </div>
 
-              <div className='mt-6 flex flex-wrap gap-2'>
+              <div className='mt-5 flex flex-wrap gap-1.5'>
                 {project.tech.map(item => (
                   <span
                     key={item}
