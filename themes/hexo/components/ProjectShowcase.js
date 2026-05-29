@@ -6,7 +6,7 @@ const projects = [
     imageAlt:
       'E-PowerSpot service robot showcased at the Hong Kong Autumn Electronics Fair',
     description:
-      'Developed a low-latency dialogue interface for service robots, keeping response time within 500ms through engineering optimization. The system supports real-time queries for stocks, cryptocurrencies, and precious metals across major global markets, and uses historical price context with LLMs to provide trend analysis and suggestions. It also integrates hot-news retrieval and RAG over million-scale private-domain data to support scenario-specific intelligent recommendations. The project was showcased with an E-PowerSpot service robot at the 2025 Hong Kong Autumn Electronics Fair.',
+      'Built a sub-500ms LLM dialogue interface for service robots, supporting real-time financial queries, market-context analysis, hot-news retrieval, and RAG over million-scale private-domain data. Showcased with an E-PowerSpot service robot at the 2025 Hong Kong Autumn Electronics Fair.',
     tech: [
       'LLM',
       'RAG',
@@ -24,7 +24,7 @@ const projects = [
     image: '/images/nana.jpg',
     imageAlt: 'NUNA AI emotion-tracking pendant',
     description:
-      'Contributed to NUNA, a commercially launched AI emotion-tracking pendant, focusing on multimodal emotion algorithm development and RAG-based question-answering interface design. The product is positioned as an emotion-aware wearable, translating multimodal sensing signals into user-facing emotional insights. My work supported the core AI interaction layer by combining emotion inference, product scenario understanding, and knowledge-grounded dialogue capabilities.',
+      'Contributed to NUNA, a commercially launched AI emotion-tracking pendant, by developing multimodal emotion algorithms and a RAG-based QA interface. Supported the core AI interaction layer for emotion-aware insights and knowledge-grounded dialogue.',
     tech: [
       'Multimodal AI',
       'Emotion Recognition',
@@ -42,7 +42,7 @@ const projects = [
     image: '/images/bg.png',
     imageAlt: 'Customized ASR system for low-resource dialects',
     description:
-      'Developed a customized speech-to-text system for specific dialects and low-resource languages by adapting Whisper beyond standard fine-tuning. Since the original model did not include dedicated language tokens for some target languages, I modified the token and embedding handling logic, designed language-specific representations, and trained the adapted model for niche speech recognition scenarios. The system reduced character error rate to below 30% and achieved over 90% semantic consistency on low-resource dialect tasks.',
+      'Adapted Whisper for low-resource dialect ASR by customizing language-token and embedding handling beyond standard fine-tuning. Reduced character error rate below 30% and achieved over 90% semantic consistency in niche speech scenarios.',
     tech: [
       'Whisper',
       'ASR',
@@ -59,7 +59,7 @@ const projects = [
     image: '/images/bg.png',
     imageAlt: 'Secure face registration and recognition system for service robots',
     description:
-      'Developed a secure face registration and recognition system for service robot scenarios, supporting user enrollment, face feature extraction, identity matching, and recognition workflows. To improve interaction safety and reliability, the system incorporated liveness detection, user-switch detection, and session-continuity checks, helping prevent spoofing, identity mismatch, and inconsistent user states during real-time human-robot interaction.',
+      'Developed a face registration and recognition system for service robots, covering user enrollment, feature extraction, and identity matching. Added liveness, user-switch, and session-continuity checks to improve interaction safety.',
     tech: [
       'Face Recognition',
       'Computer Vision',
