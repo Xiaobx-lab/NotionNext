@@ -7,11 +7,7 @@ const projects = [
     description:
       'A real-time financial intelligence interface that combines retrieval, market data lookup, and dialogue orchestration for service robot scenarios.',
     highlights: [
-      'Sub-500ms response latency target',
-      'Real-time stock, cryptocurrency, and precious metal price lookup',
-      'Financial hot-news retrieval and answer grounding',
-      'Million-scale private structured knowledge base integration',
-      'Showcased at a Hong Kong technology exhibition'
+
     ],
     tech: ['LLM', 'RAG', 'Real-Time Data', 'Financial QA', 'Service Robot']
   },
@@ -23,10 +19,6 @@ const projects = [
     description:
       'A domain knowledge system designed to support financial question answering, market context retrieval, and business-facing AI workflows.',
     highlights: [
-      'Structured financial data modeling',
-      'Private knowledge retrieval for enterprise scenarios',
-      'Search and ranking pipeline for answer relevance',
-      'Designed for multilingual financial dialogue use cases'
     ],
     tech: ['Knowledge Base', 'Vector Search', 'RAG', 'Finance', 'AI Agent']
   },
@@ -38,10 +30,6 @@ const projects = [
     description:
       'An applied AI stack for service robots, covering speech recognition, face recognition, digital human interaction, and real-time dialogue.',
     highlights: [
-      'Speech recognition pipeline for interactive scenarios',
-      'Face recognition and identity-aware interaction',
-      'Digital human interface integration',
-      'Real-time dialogue coordination across multiple AI modules'
     ],
     tech: ['Speech Recognition', 'Face Recognition', 'Digital Human', 'Robotics']
   }
