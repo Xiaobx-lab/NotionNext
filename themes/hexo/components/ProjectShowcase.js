@@ -5,8 +5,15 @@ const projects = [
     image: '/images/epowerspot-robot.png',
     imageAlt:
       'E-PowerSpot service robot showcased at the Hong Kong Autumn Electronics Fair',
-    description:
-      'Built a sub-500ms LLM dialogue interface for service robots, supporting real-time financial queries, market-context analysis, hot-news retrieval, and RAG over million-scale private-domain data. Showcased with an E-PowerSpot service robot at the 2025 Hong Kong Autumn Electronics Fair.',
+    description: (
+      <>
+        Built a <strong>sub-500ms</strong> LLM dialogue interface for service
+        robots, supporting real-time financial queries, market-context analysis,
+        hot-news retrieval, and RAG over <strong>million-scale</strong>{' '}
+        private-domain data. Showcased with an E-PowerSpot service robot at the{' '}
+        <strong>2025 Hong Kong Autumn Electronics Fair</strong>.
+      </>
+    ),
     tech: [
       'LLM',
       'RAG',
@@ -23,8 +30,14 @@ const projects = [
       'Multimodal emotion AI for a commercially launched wearable product',
     image: '/images/nana.jpg',
     imageAlt: 'NUNA AI emotion-tracking pendant',
-    description:
-      'Contributed to NUNA, a commercially launched AI emotion-tracking pendant, by developing multimodal emotion algorithms and a RAG-based QA interface. Supported the core AI interaction layer for emotion-aware insights and knowledge-grounded dialogue.',
+    description: (
+      <>
+        Contributed to NUNA, a <strong>commercially launched</strong> AI
+        emotion-tracking pendant, by developing multimodal emotion algorithms
+        and a RAG-based QA interface. Supported the core AI interaction layer
+        for emotion-aware insights and knowledge-grounded dialogue.
+      </>
+    ),
     tech: [
       'Multimodal AI',
       'Emotion Recognition',
@@ -41,8 +54,15 @@ const projects = [
       'Language-token and embedding customization for niche speech recognition',
     image: '/images/bg.png',
     imageAlt: 'Customized ASR system for low-resource dialects',
-    description:
-      'Adapted Whisper for low-resource dialect ASR by customizing language-token and embedding handling beyond standard fine-tuning. Reduced character error rate below 30% and achieved over 90% semantic consistency in niche speech scenarios.',
+    description: (
+      <>
+        Adapted Whisper for low-resource dialect ASR by customizing
+        language-token and embedding handling beyond standard fine-tuning.
+        Reduced character error rate <strong>below 30%</strong> and achieved{' '}
+        <strong>over 90%</strong> semantic consistency in niche speech
+        scenarios.
+      </>
+    ),
     tech: [
       'Whisper',
       'ASR',
