@@ -2,8 +2,7 @@
 import LazyImage from '@/components/LazyImage'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
-import { loadExternalResource } from '@/lib/utils'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import CONFIG from '../config'
 import NavButtonGroup from './NavButtonGroup'
 
@@ -14,39 +13,24 @@ let wrapperTop = 0
  * @returns
  */
 const Hero = props => {
-  const [typed, changeType] = useState()
   const { siteInfo } = props
   const { locale } = useGlobal()
+
   const scrollToWrapper = () => {
     window.scrollTo({ top: wrapperTop, behavior: 'smooth' })
   }
 
-  const GREETING_WORDS = siteConfig('GREETING_WORDS').split(',')
+  // 静态欢迎语，不再 split，也不再交给 Typed.js
+  const GREETING_WORDS = siteConfig('GREETING_WORDS')
+
   useEffect(() => {
     updateHeaderHeight()
-
-    if (!typed && window && document.getElementById('typed')) {
-      loadExternalResource('/js/typed.min.js', 'js').then(() => {
-        if (window.Typed) {
-          changeType(
-            new window.Typed('#typed', {
-              strings: GREETING_WORDS,
-              typeSpeed: 200,
-              backSpeed: 100,
-              backDelay: 400,
-              showCursor: true,
-              smartBackspace: true
-            })
-          )
-        }
-      })
-    }
 
     window.addEventListener('resize', updateHeaderHeight)
     return () => {
       window.removeEventListener('resize', updateHeaderHeight)
     }
-  })
+  }, [])
 
   function updateHeaderHeight() {
     requestAnimationFrame(() => {
@@ -65,9 +49,10 @@ const Hero = props => {
         <div className='font-black text-4xl md:text-5xl shadow-text'>
           {siteInfo?.title || siteConfig('TITLE')}
         </div>
-        {/* 站点欢迎语 */}
+
+        {/* 静态站点欢迎语：已关闭打字机效果 */}
         <div className='mt-2 h-12 items-center text-center font-medium shadow-text text-lg'>
-          <span id='typed' />
+          <span>{GREETING_WORDS}</span>
         </div>
 
         {/* 首页导航大按钮 */}
