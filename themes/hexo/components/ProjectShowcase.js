@@ -88,6 +88,39 @@ const projects = [
       'Session Consistency',
       'Service Robot'
     ]
+  },
+  {
+    title: 'Single UHD Image Dehazing via Interpretable Pyramid Network',
+    subtitle: '1st-author Q2 paper on interpretable image restoration',
+    image: '/images/dehazeNet.png',
+    imageAlt: 'Interpretable pyramid network for UHD image dehazing',
+    description: (
+      <>
+        Published as <strong>1st author</strong> in{' '}
+        <strong>Signal Processing (Q2)</strong>, proposing an interpretable
+        pyramid network based on Taylor&apos;s theorem for UHD image dehazing.
+        Shared weight tensors reduce model complexity and deliver a{' '}
+        <strong>35% performance improvement</strong> on public datasets.
+      </>
+    ),
+    links: [
+      {
+        label: 'Paper',
+        href: 'https://www.sciencedirect.com/science/article/abs/pii/S0165168423002992'
+      },
+      {
+        label: 'Code',
+        href: 'https://github.com/Xiaobx-lab/LapDehaze'
+      }
+    ],
+    tech: [
+      'Image Dehazing',
+      'UHD Image Restoration',
+      'Interpretable AI',
+      'Pyramid Network',
+      'Taylor Theorem',
+      'Computer Vision'
+    ]
   }
 ]
 
@@ -122,6 +155,21 @@ const ProjectShowcase = () => {
                   {project.description}
                 </p>
               </div>
+
+              {project.links && (
+                <div className='mt-4 flex flex-wrap gap-2'>
+                  {project.links.map(link => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='rounded-full border border-gray-300 px-3 py-1 text-sm font-medium text-gray-700 duration-150 hover:border-gray-500 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400 dark:hover:bg-gray-800'>
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              )}
 
               <div className='mt-5 flex flex-wrap gap-1.5'>
                 {project.tech.map(item => (
