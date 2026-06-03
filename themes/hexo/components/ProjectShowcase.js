@@ -63,21 +63,24 @@ const projects = [
     imageAlt: 'Multimodal perception system for service robots',
     description: (
       <>
-        Built multimodal perception modules for service robots, including
-        Whisper-based low-resource dialect ASR and secure face registration. The
-        ASR module reduced CER <strong>below 30%</strong> with{' '}
-        <strong>over 90%</strong> semantic consistency, while the vision module
-        added liveness, user-switch, and session-continuity checks.
+        Built multimodal perception modules for service robots, covering
+        dialect speech recognition, secure face registration, and real-time
+        audio processing. The speech module reduced CER{' '}
+        <strong>below 30%</strong> with <strong>over 90%</strong> semantic
+        consistency, while audio and ASR services were deployed with Ray-based
+        batching for higher-throughput inference.
       </>
     ),
     tech: [
       'Multimodal AI',
       'Whisper',
       'ASR',
+      'Audio Processing',
+      'Speaker Separation',
+      'Ray',
       'Face Recognition',
       'Liveness Detection',
-      'Service Robot',
-      'Human-Robot Interaction'
+      'Service Robot'
     ]
   },
   {
