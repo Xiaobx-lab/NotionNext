@@ -7,10 +7,11 @@ const projects = [
       'E-PowerSpot service robot showcased at the Hong Kong Autumn Electronics Fair',
     description: (
       <>
-        Built a <strong>sub-500ms</strong> LLM dialogue interface for service
-        robots, supporting real-time financial queries, market-context analysis,
-        hot-news retrieval, and RAG over <strong>million-scale</strong>{' '}
-        private-domain data. Showcased with an E-PowerSpot service robot at the{' '}
+        Built a <strong>sub-500ms</strong> <strong>LLM</strong> dialogue
+        interface for service robots, supporting real-time financial queries,
+        market-context analysis, hot-news retrieval, and <strong>RAG</strong>{' '}
+        over <strong>million-scale</strong> private-domain data. Showcased with
+        an E-PowerSpot service robot at the{' '}
         <strong>2025 Hong Kong Autumn Electronics Fair</strong>.
       </>
     ),
@@ -38,6 +39,12 @@ const projects = [
         for emotion-aware insights and knowledge-grounded dialogue.
       </>
     ),
+    links: [
+      {
+        label: 'Product',
+        href: 'https://www.thingx.ai/pages/nuna'
+      }
+    ],
     tech: [
       'Multimodal AI',
       'Emotion Recognition',
@@ -49,44 +56,28 @@ const projects = [
     ]
   },
   {
-    title: 'Whisper Adaptation for Low-Resource Dialect ASR',
+    title: 'Multimodal Perception System for Service Robots',
     subtitle:
-      'Language-token and embedding customization for niche speech recognition',
-    image: '/images/bg.png',
-    imageAlt: 'Customized ASR system for low-resource dialects',
+      'Speech recognition and identity-aware vision for human-robot interaction',
+    image: '/images/multimodal-robot.png',
+    imageAlt: 'Multimodal perception system for service robots',
     description: (
       <>
-        Adapted Whisper for low-resource dialect ASR by customizing
-        language-token and embedding handling beyond standard fine-tuning.
-        Reduced character error rate <strong>below 30%</strong> and achieved{' '}
-        <strong>over 90%</strong> semantic consistency in niche speech
-        scenarios.
+        Built multimodal perception modules for service robots, including
+        Whisper-based low-resource dialect ASR and secure face registration. The
+        ASR module reduced CER <strong>below 30%</strong> with{' '}
+        <strong>over 90%</strong> semantic consistency, while the vision module
+        added liveness, user-switch, and session-continuity checks.
       </>
     ),
     tech: [
+      'Multimodal AI',
       'Whisper',
       'ASR',
-      'Speech Recognition',
-      'Language Token Design',
-      'Embedding Customization',
-      'Model Adaptation',
-      'Low-Resource Language'
-    ]
-  },
-  {
-    title: 'Secure Face Registration & Recognition System for Service Robots',
-    subtitle: 'Identity verification with liveness and session-consistency checks',
-    image: '/images/bg.png',
-    imageAlt: 'Secure face registration and recognition system for service robots',
-    description:
-      'Developed a face registration and recognition system for service robots, covering user enrollment, feature extraction, and identity matching. Added liveness, user-switch, and session-continuity checks to improve interaction safety.',
-    tech: [
       'Face Recognition',
-      'Computer Vision',
       'Liveness Detection',
-      'Identity Verification',
-      'Session Consistency',
-      'Service Robot'
+      'Service Robot',
+      'Human-Robot Interaction'
     ]
   },
   {
